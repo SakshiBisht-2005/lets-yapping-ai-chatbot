@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST">
+
+    <label style="font-weight:500;">Choose Personality</label>
+    <select name="personality" required>
+        <option value="friend">Supportive Friend 💙</option>
+        <option value="enemy">Sarcastic Rival 😏</option>
+        <option value="roast">Funny Roast 🔥</option>
+        <option value="mother">Caring Indian Mother 🥹</option>
+    </select>
+
+    <label style="font-weight:500; margin-top:10px;">Choose Language</label>
+    <select name="language" required>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Hinglish">Hinglish</option>
+    </select>
+
+    <button type="submit" style="margin-top:15px;">
+        Start Yapping 🚀
+    </button>
+
+</form>
+
+<div class="link">
+    <a href="{{ url_for('main.logout') }}">Logout</a>
+</div>
+
+{% endblock %}
